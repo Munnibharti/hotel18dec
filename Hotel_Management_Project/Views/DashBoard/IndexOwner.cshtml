@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "IndexOwner";
+}
+
+@Html.Raw(TempData["LoginSuccessMessage"])
+
+<h2>OwnerDashBoard</h2>
+
+<h3> Welcome @Session["owner_Email"]</h3>
+
+
+<li>@Html.ActionLink("Manager", "Index", "Manager")</li>
+
+<li>@Html.ActionLink("Receptionist", "Index", "Receptionist")</li>
+
+<li>@Html.ActionLink("Department", "Index", "Department")</li>
+
+
+<li>@Html.ActionLink("Room", "Index", "Room")</li>
+
+<li>@Html.ActionLink("BillDetals","Index","Bill")</li>
+
+
+
+<h4>@Html.ActionLink("Logout", "LogoutOwner", "Dashboard")</h4>
+
+
+
+
+
+
+

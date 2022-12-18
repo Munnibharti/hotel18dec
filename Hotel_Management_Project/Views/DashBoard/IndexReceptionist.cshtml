@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "IndexReceptionist";
+}
+
+@Html.Raw(TempData["LoginSuccessMessage"])
+
+@Html.Raw(TempData["Request"])
+
+@Html.Raw(TempData["Reply"])
+
+
+<h2>ReceptionistDashBoard</h2>
+
+
+
+
+<h3> Welcome @Session["Staff_name"]</h3>
+
+<li>@Html.ActionLink("Guest", "Index", "Guest")</li>
+
+<li>@Html.ActionLink("Reservation", "Index", "Reservation")</li>
+
+<li>@Html.ActionLink("Room", "Index", "Room")</li>
+
+<h4>@Html.ActionLink("Logout", "LogoutReceptionist", "Dashboard")</h4>
+

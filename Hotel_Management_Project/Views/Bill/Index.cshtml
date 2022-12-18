@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Hotel_Management_Project.Models.Bill>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Reservations.reservation_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transaction_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_Bill)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reservations.reservation_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transaction_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_Bill)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.billing_no }) |
+           
+            @Html.ActionLink("Delete", "Delete", new { id=item.billing_no })
+        </td>
+    </tr>
+}
+
+</table>

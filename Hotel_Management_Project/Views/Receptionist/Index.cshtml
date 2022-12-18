@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Hotel_Management_Project.Models.ReceptionistAccount>
+
+@{
+    ViewBag.Title = "Index";
+}
+@Html.Raw(TempData["ReservationSuccessfully"])
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.rec_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_joining)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mail_id)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.rec_id)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.emp_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emp_address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date_of_joining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mail_id)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.rec_id }) |
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.rec_id })
+            </td>
+        </tr>
+    }
+
+</table>
